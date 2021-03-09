@@ -21,4 +21,3 @@ time.sleep(3)
 
 #点击百度一下
 button.click()
-print("完成")
