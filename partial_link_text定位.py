@@ -30,3 +30,9 @@
 #          别人笑我忒疯癫，我笑自己命太贱；
 #          不见满街漂亮妹，哪个归得程序员？
 
+#partial_link_text模糊匹配 默认返回符合条件的第一个元素
+from selenium import webdriver
+driver = webdriver.Chrome()
+url = "http://www.baidu.com"
+driver.get(url)
+driver.find_element_by_partial_link_text("直").click()
