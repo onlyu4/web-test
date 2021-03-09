@@ -9,7 +9,7 @@ driver = webdriver.Chrome()
 url = "http://www.baidu.com"
 driver.get(url)
 
-#找到文本输入框的tag_name
+#找到文本输入框的tag_name，如果存在相同的标签名，返回第一个
 input_box = driver.find_element_by_tag_name("input")
 
 #输入北京天气
