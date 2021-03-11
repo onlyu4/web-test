@@ -45,5 +45,5 @@
 '''
 from selenium import webdriver
 
-//*[@id="body_step1"]/div/div[2]/input
+#//*[@id="body_step1"]/div/div[2]/input
 #body_step1 > div > div:nth-child(2) > input
