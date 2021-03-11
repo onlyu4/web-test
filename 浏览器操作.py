@@ -29,40 +29,15 @@
 #          奔驰宝马贵者趣，公交自行程序员。
 #          别人笑我忒疯癫，我笑自己命太贱；
 #          不见满街漂亮妹，哪个归得程序员？
-
-''''
-需求：1、打开浏览器进入注册页面
-      2、在电话号栏输入123456
-      3、间隔三秒后修改为987654
-      4、点击注册按钮
-'''
-#导包
 from selenium import webdriver
-from  time import sleep
 
 #获取浏览器对象
-driver = webdriver.Chrome()
+
 
 #打开注册页面
-url = "http://www.beidaihe.com.cn/demolregist"
-driver.get(url)
-
-#填写手机号
-phone_number = driver.find_element_by_xpath('//*[@id="body_step1"]/div/div[2]/input').send_keys("123456")
-
-#停止三秒
-sleep(3)
-
-#修改手机号
-
-driver.find_element_by_xpath('//*[@id="body_step1"]/div/div[2]/input').clear()
-new_phone_number = driver.find_element_by_xpath('//*[@id="body_step1"]/div/div[2]/input').send_keys("987654")
 
 
-#点击注册按钮
-tap = driver.find_element_by_id("next").click()
+#用户名输入123
 
-sleep(3)
 
-#关闭浏览器
-driver.close()
+#刷新
