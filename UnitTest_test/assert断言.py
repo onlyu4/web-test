@@ -54,4 +54,5 @@ class Test_Login(unittest.TestCase):
             self.assertEqual(al,exp)
         except AssertionError:
             self.driver.get_screenshot_as_file("./error.png")
+            #抛出异常
             raise
