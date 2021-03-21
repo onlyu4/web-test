@@ -11,16 +11,24 @@ driver.implicitly_wait(30)
 
 
 #打开url
-url = "https://www.suning.com/?utm_source=baidu&utm_medium=brand&utm_campaign=title&utm_term=brand"
+url = "http://www.jszwfw.gov.cn/jsjis/front/login.do"
 driver.get(url)
-#找到登录按钮并点击
-driver.find_element_by_link_text("请登录").click()
-driver.find_element_by_link_text("账户登录").click()
 
 #输入用户名
-driver.find_element_by_xpath('//*[@id="userName"]').send_keys("177895881216")
-#输入密码
-driver.find_element_by_xpath('//*[@id="password"]').send_keys("adjaklhfgjd")
-#点击登录按钮
+driver.find_element_by_css_selector("#grusername").send_keys("177895881216")
 
+
+#输入密码
+driver.find_element_by_css_selector("#grpwd").send_keys("adjaklhfgjd")
+
+
+#点击登录按钮
+driver.find_element_by_css_selector("#grloginform > div.login_mc_a > a.login_lg").click()
+
+#找到提示窗口
+information = driver.find_element_by_css_selector("body > div.panel.window.messager-window > div.messager-body.panel-body.panel-body-noborder.window-body > div:nth-child(2) > div").text
+print(information)
+
+#点击提示信息
+driver.find_element_by_css_selector("body > div.panel.window.messager-window > div.messager-body.panel-body.panel-body-noborder.window-body > div.messager-button > a").click()
 
